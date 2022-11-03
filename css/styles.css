@@ -165,7 +165,7 @@ body {
   height: 4px;
   border-radius: 2px;
   background-color: var(--accent-color);
-/* 
+  /* 
   opacity: 0;
   transform: scaleX(0);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -455,7 +455,7 @@ body {
   align-items: center;
   justify-content: center;
   color: #afb1b8;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-soc-icon {
@@ -593,6 +593,243 @@ body {
   background: rgba(255, 255, 255, 0.1);
 }
 
+.right-col {
+  margin-right: 93px;
+}
+
+.sub-col {
+}
+
+.sub-title {
+  color: var(--primary-bg-color);
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.sub-form {
+}
+
+.sub-input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  padding-left: 16px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
+.sub-button {
+  width: 200px;
+  height: 50px;
+  background: var(--accent-color);
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
+  border-radius: 4px;
+  color: var(--primary-bg-color);
+  margin-right: 12px;
+}
+
+.sub-icon {
+  display: inline-block;
+  position: absolute;
+  margin-right: 50px;
+}
+
+/* -----modal window------- */
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(47, 48, 58, 0.4);
+  position: fixed;
+  top: 0;
+  transition: opacity 250ms linear, visibility 250ms linear;
+}
+
+.modal {
+  width: 528px;
+  min-height: 500px;
+  background-color: var(--primary-bg-color);
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+  transform: translate(-50%, -50%) scaleY(1);
+
+  transition: transform 250ms linear, border-radius 250ms linear;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scaleY(0);
+  border-radius: 50%;
+}
+
+.modal-close {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 12px;
+}
+
+.modal-field {
+  margin-bottom: 10px;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  padding-left: 48px;
+  outline: transparent;
+}
+
+.modal-comment {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 16px;
+  resize: none;
+}
+
+.modal-input:focus {
+  border-color: var(--accent-color);
+}
+
+.input-label {
+  font-size: 12px;
+  line-height: 1.17;
+  color: var(--color-text-secondary);
+}
+
+/* .input-label span, */
+.input-label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.modal-input:focus + .modal-input-icon {
+  fill: var(--accent-color);
+}
+
+.modal-input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-input::placeholder,
+.modal-comment::placeholder {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.modal-input:not(:focus):not(:placeholder-shown):valid,
+.modal-comment:not(:focus):not(:placeholder-shown):valid {
+  background-color: rgba(0, 98, 128, 0.373);
+}
+
+.modal-input:not(:focus):not(:placeholder-shown):invalid {
+  background-color: rgba(235, 37, 37, 0.244);
+}
+
+.checkbox {
+  /* position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0); */
+}
+
+.label {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+
+  border: 2px solid var(--black-color);
+  border-radius: 5px;
+}
+
+.checkbox-label:checked + .icon {
+  border-color: transparent;
+  background-color: var(--accent-color);
+  background-image: url(../images/check.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.checkbox-link {
+  color: var(--accent-color);
+}
+
+.modal-button {
+  border-radius: 4px;
+  padding: 10px 52px;
+  margin-top: 30px;
+
+  color: var(--primary-bg-color);
+  background: var(--accent-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border: none;
+}
+
+.modal-button:hover,
+.modal-button:focus {
+  background-color: var(--accent-active-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* ------ styles for portfolio -------- */
 
 .secondary-button {
@@ -715,56 +952,6 @@ body {
   color: var(--color-text-secondary);
   font-size: 16px;
   line-height: 1.88;
-}
-
-/* -----modal window------- */
-
-.backdrop {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(47, 48, 58, 0.4);
-  position: fixed;
-  top: 0;
-  transition: opacity 250ms linear, visibility 250ms linear;
-}
-
-.modal {
-  width: 500px;
-  min-height: 500px;
-  background-color: var(--primary-bg-color);
-  border-radius: 5px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scaleY(1);
-
-  transition: transform 250ms linear, border-radius 250ms linear;
-}
-
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scaleY(0);
-  border-radius: 50%;
-}
-
-.modal-close {
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  border: 1px solid #000000;
-  border-radius: 50%;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
 }
 
 /* -----finish------- */
