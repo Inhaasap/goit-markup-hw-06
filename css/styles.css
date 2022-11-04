@@ -760,13 +760,16 @@ body {
   color: var(--color-text-secondary);
 }
 
-.modal-input:not(:focus):not(:placeholder-shown):valid,
-.modal-comment:not(:focus):not(:placeholder-shown):valid {
-  background-color: rgba(0, 98, 128, 0.373);
+.modal-input:not(:focus):not(:placeholder-shown):valid {
+  background-color: rgba(0, 128, 0, 0.373);
 }
 
 .modal-input:not(:focus):not(:placeholder-shown):invalid {
-  background-color: rgba(235, 37, 37, 0.244);
+  background-color: rgba(128, 32, 0, 0.373);
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .checkbox {
