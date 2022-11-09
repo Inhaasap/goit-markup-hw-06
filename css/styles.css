@@ -827,6 +827,7 @@ body {
 
   border: 2px solid var(--black-color);
   border-radius: 4px;
+  transform: translateY(20%);
 }
 
 .checkbox:checked + .icon {
