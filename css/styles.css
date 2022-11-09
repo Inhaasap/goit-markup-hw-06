@@ -249,12 +249,12 @@ body {
   letter-spacing: 0.06em;
   cursor: pointer;
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
 .hero-button:focus {
   background-color: var(--accent-active-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*---------- features --------- */
@@ -594,7 +594,7 @@ body {
 }
 
 .right-col {
-  margin-right: 93px;
+  margin-right: auto;
 }
 
 .sub-col {
@@ -620,22 +620,36 @@ body {
   font-size: 16px;
   padding-left: 16px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background-color: transparent;
 }
 
 .sub-button {
+  position: relative;
+  border-radius: 4px;
   width: 200px;
   height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
   background: var(--accent-color);
-  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
+  border-color: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   color: var(--primary-bg-color);
-  margin-right: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
+
+
 .sub-icon {
-  display: inline-block;
   position: absolute;
-  margin-right: 50px;
+  display: inline-block;
+  right: 20px;
+  bottom: 10px;
 }
 
 /* -----modal window------- */
@@ -672,7 +686,7 @@ body {
   width: 30px;
   height: 30px;
   background-color: transparent;
-  border: 1px solid #000000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   position: absolute;
   right: 10px;
@@ -681,6 +695,11 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:hover {
+  fill: var(--accent-color);
 }
 
 .backdrop.is-hidden {
@@ -700,7 +719,7 @@ body {
 }
 
 .modal-field {
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .input-wrap {
@@ -725,6 +744,7 @@ body {
   border-radius: 4px;
   padding: 16px;
   resize: none;
+  margin-bottom: 20px;
 }
 
 .modal-input:focus {
@@ -737,7 +757,7 @@ body {
   color: var(--color-text-secondary);
 }
 
-/* .input-label span, */
+.input-label span,
 .input-label {
   display: block;
   margin-bottom: 4px;
@@ -760,9 +780,9 @@ body {
   color: var(--color-text-secondary);
 }
 
-.modal-input:not(:focus):not(:placeholder-shown):valid {
+/* .modal-input:not(:focus):not(:placeholder-shown):valid {
   background-color: rgba(0, 128, 0, 0.373);
-}
+} */
 
 .modal-input:not(:focus):not(:placeholder-shown):invalid {
   background-color: rgba(128, 32, 0, 0.373);
@@ -786,7 +806,16 @@ body {
 
 .label {
   display: flex;
+  justify-content: center;
+  gap: 8px;
   align-items: center;
+}
+
+.checkbox-label {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--color-text-secondary);
 }
 
 .icon {
@@ -794,6 +823,7 @@ body {
   width: 18px;
   height: 18px;
   margin-right: 7px;
+  /* margin-top: 4px; */
 
   border: 2px solid var(--black-color);
   border-radius: 4px;
@@ -809,7 +839,7 @@ body {
 
 .checkbox-link {
   color: var(--accent-color);
-}  
+}
 
 .modal-button {
   border-radius: 4px;
@@ -825,12 +855,15 @@ body {
   letter-spacing: 0.06em;
   cursor: pointer;
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0 auto;
+  margin-top: 30px;
+  display: block;
 }
 
 .modal-button:hover,
 .modal-button:focus {
   background-color: var(--accent-active-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ------ styles for portfolio -------- */
